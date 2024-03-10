@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/projeto-final-curso/static/css/main.0d1e83a1.css",
+    "main.js": "/projeto-final-curso/static/js/main.76a3e276.js",
+    "static/js/787.498e3191.chunk.js": "/projeto-final-curso/static/js/787.498e3191.chunk.js",
+    "static/media/tenis.jpeg": "/projeto-final-curso/static/media/tenis.7024716a6c36e7f51375.jpeg",
+    "static/media/oculos.jpeg": "/projeto-final-curso/static/media/oculos.4389081163abd10df8c3.jpeg",
+    "static/media/bootstrap-icons.woff?": "/projeto-final-curso/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bone.jpg": "/projeto-final-curso/static/media/bone.9594bd919b9a97494064.jpg",
+    "static/media/sneakersCategories.jpg": "/projeto-final-curso/static/media/sneakersCategories.1e5f10a86a2fdf95a239.jpg",
+    "static/media/bootstrap-icons.woff2?": "/projeto-final-curso/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/hatCategories.jpg": "/projeto-final-curso/static/media/hatCategories.7852d0d4a0011aca985e.jpg",
+    "static/media/pexels-asim-alnamat-343720 (1).jpg": "/projeto-final-curso/static/media/pexels-asim-alnamat-343720 (1).b961493c07768cbad11f.jpg",
+    "static/media/pexels-jd-danny-2385477.jpg": "/projeto-final-curso/static/media/pexels-jd-danny-2385477.7350a502e7d41a1cd387.jpg",
+    "static/media/pexels-aman-jakhar-1124465.jpg": "/projeto-final-curso/static/media/pexels-aman-jakhar-1124465.c86222df07ceeef331e8.jpg",
+    "static/media/sunGlassCategories.jpg": "/projeto-final-curso/static/media/sunGlassCategories.1f02c613786a8cf2ce85.jpg",
+    "index.html": "/projeto-final-curso/index.html",
+    "main.0d1e83a1.css.map": "/projeto-final-curso/static/css/main.0d1e83a1.css.map",
+    "main.76a3e276.js.map": "/projeto-final-curso/static/js/main.76a3e276.js.map",
+    "787.498e3191.chunk.js.map": "/projeto-final-curso/static/js/787.498e3191.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d1e83a1.css",
+    "static/js/main.76a3e276.js"
+  ]
+}
