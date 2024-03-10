@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/projeto-final-curso/static/css/main.0d1e83a1.css",
-    "main.js": "/projeto-final-curso/static/js/main.76a3e276.js",
+    "main.js": "/projeto-final-curso/static/js/main.5b462808.js",
     "static/js/787.498e3191.chunk.js": "/projeto-final-curso/static/js/787.498e3191.chunk.js",
     "static/media/tenis.jpeg": "/projeto-final-curso/static/media/tenis.7024716a6c36e7f51375.jpeg",
     "static/media/oculos.jpeg": "/projeto-final-curso/static/media/oculos.4389081163abd10df8c3.jpeg",
@@ -16,11 +16,11 @@
     "static/media/sunGlassCategories.jpg": "/projeto-final-curso/static/media/sunGlassCategories.1f02c613786a8cf2ce85.jpg",
     "index.html": "/projeto-final-curso/index.html",
     "main.0d1e83a1.css.map": "/projeto-final-curso/static/css/main.0d1e83a1.css.map",
-    "main.76a3e276.js.map": "/projeto-final-curso/static/js/main.76a3e276.js.map",
+    "main.5b462808.js.map": "/projeto-final-curso/static/js/main.5b462808.js.map",
     "787.498e3191.chunk.js.map": "/projeto-final-curso/static/js/787.498e3191.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d1e83a1.css",
-    "static/js/main.76a3e276.js"
+    "static/js/main.5b462808.js"
   ]
 }
