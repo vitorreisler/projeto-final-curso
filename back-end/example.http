@@ -1,0 +1,126 @@
+@local = http://localhost:3001
+@productId = 9b5cfd87-58b4-4026-bef7-70aeb7537c61
+@userId = 65aecba7a7229849a4ac421f
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFlY2MxZDZjNDgzMGFhOTNmNWQyMDUiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA2MDIzNjIwfQ.mbviOvFjCs-UaCPYAFQSwClIkHoNhWLOqnJKo1-VIHo
+@adminToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFmZThlZTUzODY0MDM4MDFiOTg4OTMiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MDYwMjc4MTh9.QV7KgwZ37IuNgybk-NNwEKTN_70ESsOopGsJMdKeNsY
+GET {{local}}/api/users/
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+###
+GET {{local}}/api/users/65afe8ee5386403801b98893
+Content-Type: application/json
+x-auth-token: {{token}}
+
+###
+GET {{local}}/api/users/65aecba7a7229849a4ac421f
+Content-Type: application/json
+x-auth-token: {{token}}
+
+###
+POST {{local}}/api/users/
+Content-Type: application/json
+
+{
+    "first": "Vitor",
+    "surname": "Reis",
+    "email": "vitor@gmail.com",
+    "phone": 12345678911,
+    "password": "Aa!123456",
+    "state": "SP",
+    "city": "SP",
+    "street": "aaaaaa av",
+    "houseNumber": 1234
+}
+
+###
+POST {{local}}/api/users/login
+Content-Type: application/json
+
+
+{
+    "email": "vitor4@gmail.com",
+    "password": "Aa123456"
+
+}
+
+###
+PUT {{local}}/api/users/65dc8f7edb7b945ef82bf1b5
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRjOGY3ZWRiN2I5NDVlZjgyYmYxYjUiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzA4OTUzNDg1fQ.S9of_GiXvxINP1AQCeD7N5dsyZNnVEY3NUfs_VGNa8c
+
+{
+    "first": "Vitor",
+    "surname": "Reisler",
+    "email": "vitor123456@gmail.com",
+    "phone": 98765432111,
+    "password": "Aa123456",
+    "state": "SP",
+    "city": "SP",
+    "street": "bla bla av",
+    "houseNumber": 4321,
+    "url":" https://static.wikia.nocookie.net/fiction-battlefield/images/3/34/Baki_render_2018.png/revision/latest?cb=20191230072502&path-prefix=pt-br"
+}
+
+###
+PATCH {{local}}/api/users/65b0061b7627e3fc1e33f88c
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+###
+DELETE {{local}}/api/users/65b0124527220a1e5b9ee4c7
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+
+
+
+
+###
+GET {{local}}/api/products/
+
+###
+GET {{local}}/api/products/{{productId}}
+###
+GET {{local}}/api/products/category/sneakers
+
+###
+POST {{local}}/api/products/
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+{
+    "productName": "tesat", 
+    "productDescription": "Protecting your eyes from UV",
+    "productPrice": 15,
+    "productSize": "G",
+    "url": "https://m.media-amazon.comrfzbdfbaznaz",
+    "category": "sunglasses"
+    
+
+}
+
+###
+PUT {{local}}/api/products/{{productId}}
+Content-Type: application/json
+x-auth-token:{{adminToken}}
+
+{
+    "productName": "teste",
+    "productDescription": "teste",
+    "productPrice": 70,
+    "productSize": "P"
+    
+}
+
+###
+PATCH {{local}}/api/products/c3c5666d-c17e-4ca5-9a45-f814c0a996f3
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+###
+DELETE {{local}}/api/products/{{productId}}
+Content-Type: application/json
+x-auth-token: {{adminToken}}
+
+###
