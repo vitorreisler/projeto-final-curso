@@ -1,7 +1,9 @@
 import axios from "axios";
 
+
 const TOKEN_KEY = "token";
 const API_BASE = "http://localhost:8080";
+
 
 export async function createUser(user) {
   const response = await axios.post(`${API_BASE}/api/users`, user);
@@ -19,6 +21,7 @@ export async function login(credentials) {
     }
   );
   localStorage.setItem(TOKEN_KEY, data.token);
+  
 }
 
 export async function deleteUser(id) {

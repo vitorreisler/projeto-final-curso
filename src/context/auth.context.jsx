@@ -9,25 +9,28 @@ export const authContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(localStorage.getItem(TOKEN_KEY));
   const refreshUser = () => {
-    const decodeUser = getUser()
-    console.log(decodeUser);
-    return setUser(decodeUser);
+    const decodeUser = getUser();
+    setUser(decodeUser)
+    return user
   };
-  
 
   const login = async (credentials) => {
-   const res = await userService.login(credentials)
-   console.log(res);
+    const res = await userService.login(credentials);
     refreshUser();
+    setTimeout(() => {
+      window.open("/projeto-final-curso", "_self")
+
+    }, 3000);
     return res;
   };
+
   const logout = () => {
     localStorage.removeItem(TOKEN_KEY);
     refreshUser();
   };
 
-  function getJWT(){
-    return localStorage.getItem(TOKEN_KEY)
+  function getJWT() {
+    return localStorage.getItem(TOKEN_KEY);
   }
   function getUser() {
     try {
@@ -45,6 +48,7 @@ export function AuthProvider({ children }) {
         login,
         logout,
         getUser,
+        refreshUser,
       }}
     >
       {children}

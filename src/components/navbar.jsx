@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth.context";
 import { useLike } from "../context/like.context";
@@ -12,12 +12,10 @@ const Navbar = () => {
   const { total, productWithPrice } = useCart();
   const navigate = useNavigate();
 
-
   const handleUser = async () => {
-     await userService.getUserById(userOn._id)
-    await navigate(`/user-profile/${userOn._id}`)
-  }
-
+    await userService.getUserById(userOn._id);
+    await navigate(`/user-profile/${userOn._id}`);
+  };
 
   return (
     <nav
@@ -95,18 +93,23 @@ const Navbar = () => {
             </li>
             {userOn && (
               <>
-              <li className="text-light">
-                {" "}
-                <NavLink to={"/my-favorites"} className={"nav-link"}>
+                <li className="text-light">
                   {" "}
-                  My Favs
-                </NavLink>
-              </li>
-              <li className="text-light " >
-                <NavLink to={`/user-profile/${userOn._id}`} onClick={handleUser}  /*onClick={handleUserEdit} to={"/user-edit/:id"} */  className={"nav-link"}>
-                <i className="bi bi-person-circle"/>
-
-                </NavLink>
+                  <NavLink to={"/my-favorites"} className={"nav-link"}>
+                    {" "}
+                    My Favs
+                  </NavLink>
+                </li>
+                <li className="text-light ">
+                  <NavLink
+                    to={`/user-profile/${userOn._id}`}
+                    onClick={handleUser}
+                    /*onClick={handleUserEdit} to={"/user-edit/:id"} */ className={
+                      "nav-link"
+                    }
+                  >
+                    <i className="bi bi-person-circle" />
+                  </NavLink>
                 </li>
               </>
             )}

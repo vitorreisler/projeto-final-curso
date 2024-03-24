@@ -92,7 +92,7 @@ const Product = ({
         <p className="card-text m-0">Size: {productSize}</p>
         <p className="card-text m-0">Category: {category}</p>
         <div className="d-flex justify-content-center align-items-center pt-3 mb-0">
-          {user && (
+          {userOn && (
             <div className="d-flex align-items-center">
               <span
                 className="mx-3"

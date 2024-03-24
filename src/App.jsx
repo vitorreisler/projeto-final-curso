@@ -29,9 +29,8 @@ import UserEditUser from "./components/userEditUser";
 import UserProfile from "./components/userProfile";
 import UserDeleteUser from "./components/userDeleteUser";
 
-
 function App() {
-
+  
   return (
     <div className="App">
       <header>
@@ -40,6 +39,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/projeto-final-curso" element={<HomePage />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/about" element={<About />} />
@@ -50,7 +50,7 @@ function App() {
           <Route path="/category/sneakers" element={<Sneakers />} />
           <Route path="/category/hats" element={<Hats />} />
           <Route path="/category/sunglasses" element={<SunGlasses />} />
-          <Route path="/search-results" element={<SearchResult/>} />
+          <Route path="/search-results" element={<SearchResult />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/check-out" element={<CheckOut />} />
           <Route path="/payments" element={<Payments />} />

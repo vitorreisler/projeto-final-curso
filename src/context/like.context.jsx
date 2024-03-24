@@ -8,20 +8,20 @@ export const LikeProvider = ({ children }) => {
   const [likedProducts, setLikedProducts] = useState([]);
   const { getUser } = useAuth();
   const [userOn, setUserOn] = useState("");
+
   useEffect(() => {
     const userOnline = getUser();
     setUserOn(userOnline);
-  }, [getUser]);
 
-  useEffect(() => {
     const fetchData = async () => {
-      if (!userOn) {
+      if (!userOnline) {
+        console.log("User not online");
         return null;
       }
       try {
         const products = await productService.getAllProducts();
         const userLikedProducts = products.filter((product) =>
-          product.likes.includes(userOn._id)
+          product.likes.includes(userOnline._id)
         );
         setLikedProducts(userLikedProducts);
       } catch (error) {
@@ -30,8 +30,7 @@ export const LikeProvider = ({ children }) => {
     };
 
     fetchData();
-    return () => {};
-  }, [userOn]);
+  }, [getUser]);
 
   const addFavorite = async (id) => {
     try {
@@ -52,10 +51,9 @@ export const LikeProvider = ({ children }) => {
   };
 
   const removeFavorite = async (productId) => {
-    // API REQUEST FOR UNLIKE
-    await productService.likeProduct(productId);
-
     try {
+      // API REQUEST FOR UNLIKE
+      await productService.likeProduct(productId);
       // REMOVE THE LIKE FROM THE STATE
       setLikedProducts(
         (prevLikedProducts) =>

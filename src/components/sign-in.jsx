@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Joi from "joi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,7 +10,6 @@ import Input from "./commons/input";
 import { useAuth } from "../context/auth.context";
 const SignIn = () => {
   const { login } = useAuth();
-  const navigate = useNavigate();
   const [serverError, setServerError] = useState("");
   const formik = useFormik({
     validateOnMount: true,
@@ -21,11 +20,7 @@ const SignIn = () => {
     async onSubmit(values) {
       try {
         await login(values);
-        await toast.success("You are on");
-
-        await setTimeout(() => {
-          navigate("/about");
-        }, 3000);
+        toast.success("You are on");
       } catch (err) {
         toast.error(" Something wrong occurred", { hideProgressBar: true });
         setServerError(err.response?.data);
@@ -33,11 +28,13 @@ const SignIn = () => {
     },
     validate: validateFormikUsingJoi({
       email: Joi.string().min(6).max(255).required(),
-      password: Joi.string().min(8).max(255).regex(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
-      ).required(),
+      password: Joi.string()
+        .min(8)
+        .max(255)
+        .regex(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+        .required(),
     }),
   });
-
 
   return (
     <>
